@@ -1,44 +1,146 @@
-import React from "react";
+import React, { useState } from "react";
+import { MdViewHeadline } from "react-icons/md";
 import { HashLink as Link } from "react-router-hash-link";
 
-const Navbar = () => {
+const NavBar = () => {
+  const [OpenNav, setOpenNav] = useState(false);
+
+  const hundleOnOpen = () => {
+    setOpenNav(!OpenNav);
+  };
   return (
-    <div className="w-full h-[120px] mr-0 ml-0 absolute border-b-2 border-slate-300">
-      <nav className="max-w-[1800px] mx-auto px-20 h-full flex justify-between items-center">
-        {/* =========== LOGO START HERE =========== */}
-        <div>
-          <a href={"/home"}>
+    <div>
+      <nav className=" absolute w-full h-[120px] z-20 top-0 left-0 border-b border-white-200 dark:border-white-600">
+        <div className="max-w-[1800px] mx-auto h-full flex flex-wrap items-center justify-between px-8 sm:px-16 lg:px-8 ">
+
+          {/* ======== LOGO START HERE ============ */}
+          <Link to={"/liea"} className="flex items-center">
             <img
-              src="//uploads-ssl.webflow.com/63c0348e8e38eb4cc747e99e/63f3a6fc6498f4e353ff39d7_logo.svg"
-              alt="logo"
-            ></img>
-          </a>
-        </div>
-        {/* =========== LOGO END HERE =========== */}
+              src={
+                "//uploads-ssl.webflow.com/63c0348e8e38eb4cc747e99e/63f3a6fc6498f4e353ff39d7_logo.svg"
+              }
+              className="h-18 mr-3"
+              alt="Flowbite Logo"
+            />
+          </Link>
+          {/* ======== LOGO END HERE ============ */}
 
-        {/* =========== LINKS START HERE =========== */}
-        <div className="links">
-          <ul className="flex cursor-pointer space-x-8 text-xl text-white">
-            <Link to={"/liea"}>Home</Link>
-            <Link to={"/liea#products"}>Products</Link>
-            <Link to={"/liea#LieaAbout"}>About us</Link>
-          </ul>
-        </div>
-        {/* =========== LINKS END HERE =========== */}
+          {/* ======== BUTTONS START HERE ============ */}
+          <div className="flex items-center justify-center text-white space-x-4 text-center md:order-2">
+            <button className="hidden text-xl sm:flex text-center rounded-full backdrop-blur-sm bg-white/20 px-4 py-1">
+              Contact us
+            </button>
 
-        {/* =========== BUTTONS START HERE =========== */}
-        <div className="buttons space-x-2 text-xl text-white flex justify-center items-center  ">
-          <button className=" text-center rounded-full backdrop-blur-sm bg-white/20 px-4 py-1">
-            Contact us
-          </button>
-          <button className=" text-center bg-green-900 p-1 px-4 rounded-full">
-            AR
-          </button>
+            <button className="hidden text-xl sm:flex text-center bg-green-900 p-1 px-4 rounded-full">
+              <Link>AR</Link>
+            </button>
+
+            <button
+              onClick={hundleOnOpen}
+              data-collapse-toggle="navbar-sticky"
+              type="button"
+              className="inline-flex items-center px-3 py-2  justify-center text-4xl text-white-500 rounded-full lg:hidden focus:outline-none dark:bg-green-900"
+              aria-controls="navbar-sticky"
+              aria-expanded="false"
+            >
+              <span className="sr-only">Open main menu</span>
+            <MdViewHeadline/>
+            </button>
+          {/* ======== BUTTONS END HERE ============ */}
+
+          </div>
+          {/* nav links */}
+          <div
+            className="items-center justify-between hidden w-full lg:flex md:w-auto md:order-1"
+            id="navbar-sticky"
+          >
+            <ul className="flex flex-col p-4 md:p-0 mt-4 font-medium border border-gray-100 rounded-lg md:flex-row md:space-x-8 md:mt-0 md:border-0">
+              <li>
+                <Link
+                  smooth
+                  to={"/liea"}
+                  className="block py-2 pl-3 pr-4 text-white rounded md:bg-transparent md:p-0 "
+                  aria-current="page"
+                >
+                  Home
+                </Link>
+              </li>
+              <li>
+                <Link
+                  smooth
+                  to={"/liea#Products"}
+                  className="block py-2 pl-3 pr-4 text-green-900 rounded md:hover:bg-transparent md:p-0 dark:text-white dark:hover:text-white md:dark:hover:bg-transparent"
+                >
+                  Products
+                </Link>
+              </li>
+              <li>
+                <Link
+                  smooth
+                  to={"/liea#LieaAbout"}
+                  className="block py-2 pl-3 pr-4 text-green-900 rounded md:hover:bg-transparent md:p-0 dark:text-white dark:hover:text-white md:dark:hover:bg-transparent"
+                >
+                  About us
+                </Link>
+              </li>
+            </ul>
+          </div>
+          {/* nav links */}
+
+          {/* small nav  */}
+          <div
+            className={
+              OpenNav
+                ? "lg:hidden w-full absolute transition ease-in-out delay-150 top-[100px] left-0"
+                : "hidden"
+            }
+            id="navbar-hamburger"
+          >
+            <ul className="flex flex-col font-medium mt-4 bg-green-900 ">
+              <li>
+                <Link
+                  onClick={() => {
+                    setOpenNav(!OpenNav);
+                  }}
+                  smooth
+                  to={"/liea"}
+                  className="block py-4 px-5  dark:text-green-400"
+                  aria-current="page"
+                >
+                  Home
+                </Link>
+              </li>
+              <li>
+                <Link
+                  onClick={() => {
+                    setOpenNav(!OpenNav);
+                  }}
+                  smooth
+                  to={"/liea#Products"}
+                  className="block py-4 px-5 text-green-900 rounded dark:text-green-400  dark:hover:text-green"
+                >
+                  Products
+                </Link>
+              </li>
+              <li>
+                <Link
+                  onClick={() => {
+                    setOpenNav(!OpenNav);
+                  }}
+                  smooth
+                  to={"/liea#LieaAbout"}
+                  className="block py-4 px-5 text-green-900 rounded dark:text-green-400"
+                >
+                  About us
+                </Link>
+              </li>
+            </ul>
+          </div>
+          {/* small nav  */}
         </div>
-        {/* =========== BUTTONS END HERE =========== */}
       </nav>
     </div>
   );
 };
 
-export default Navbar;
+export default NavBar;
