@@ -26,12 +26,12 @@ const NavBar = () => {
           {/* ======== LOGO END HERE ============ */}
 
           {/* ======== BUTTONS START HERE ============ */}
-          <div className="flex items-center justify-center text-white space-x-4 text-center md:order-2">
-            <button className="hidden text-xl sm:flex text-center rounded-full backdrop-blur-sm bg-white/20 px-4 py-1">
+          <div className="flex items-center justify-center text-white space-x-4 text-center md:order-2 ">
+            <button className="hidden text-xl md:flex text-center rounded-full backdrop-blur-sm bg-white/20 px-4 py-1">
               Contact us
             </button>
 
-            <button className="hidden text-xl sm:flex text-center bg-green-900 p-1 px-4 rounded-full">
+            <button className="hidden text-xl md:flex text-center bg-green-900 p-1 px-4 rounded-full">
               <Link>AR</Link>
             </button>
 
@@ -39,7 +39,7 @@ const NavBar = () => {
               onClick={hundleOnOpen}
               data-collapse-toggle="navbar-sticky"
               type="button"
-              className="inline-flex items-center px-3 py-2  justify-center text-4xl text-white-500 rounded-full lg:hidden focus:outline-none dark:bg-green-900"
+              className="inline-flex items-center px-3 py-2 bg-green-900 justify-center text-4xl text-white-500 rounded-full lg:hidden focus:outline-none dark:bg-green-900"
               aria-controls="navbar-sticky"
               aria-expanded="false"
             >
@@ -69,7 +69,7 @@ const NavBar = () => {
                 <Link
                   smooth
                   to={"/liea#Products"}
-                  className="block py-2 pl-3 pr-4 text-green-900 rounded md:hover:bg-transparent md:p-0 dark:text-white dark:hover:text-white md:dark:hover:bg-transparent"
+                  className="block py-2 pl-3 pr-4 text-white rounded md:p-0  "
                 >
                   Products
                 </Link>
@@ -78,7 +78,7 @@ const NavBar = () => {
                 <Link
                   smooth
                   to={"/liea#LieaAbout"}
-                  className="block py-2 pl-3 pr-4 text-green-900 rounded md:hover:bg-transparent md:p-0 dark:text-white dark:hover:text-white md:dark:hover:bg-transparent"
+                  className="block py-2 pl-3 pr-4 text-white rounded md:hover:bg-transparent md:p-0 dark:text-white dark:hover:text-white md:dark:hover:bg-transparent"
                 >
                   About us
                 </Link>
@@ -104,7 +104,7 @@ const NavBar = () => {
                   }}
                   smooth
                   to={"/liea"}
-                  className="block py-4 px-5  dark:text-green-400"
+                  className="block py-4 px-5  text-white hover:text-green-500"
                   aria-current="page"
                 >
                   Home
@@ -117,7 +117,7 @@ const NavBar = () => {
                   }}
                   smooth
                   to={"/liea#Products"}
-                  className="block py-4 px-5 text-green-900 rounded dark:text-green-400  dark:hover:text-green"
+                  className="block py-4 px-5 text-white rounded dark:text-green-400 hover:text-green-500"
                 >
                   Products
                 </Link>
@@ -129,7 +129,7 @@ const NavBar = () => {
                   }}
                   smooth
                   to={"/liea#LieaAbout"}
-                  className="block py-4 px-5 text-green-900 rounded dark:text-green-400"
+                  className="block py-4 px-5 text-white rounded hover:text-green-500"
                 >
                   About us
                 </Link>
