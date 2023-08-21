@@ -51,15 +51,15 @@ const NavBar = () => {
           </div>
           {/* nav links */}
           <div
-            className="items-center justify-between hidden w-full lg:flex md:w-auto md:order-1"
+            className="items-center  justify-between hidden w-full lg:flex md:w-auto md:order-1"
             id="navbar-sticky"
           >
-            <ul className="flex flex-col p-4 md:p-0 mt-4 font-medium border border-gray-100 rounded-lg md:flex-row md:space-x-8 md:mt-0 md:border-0">
+            <ul className="flex flex-col  p-4 md:p-0 mt-4 font-medium border border-gray-100 rounded-lg md:flex-row md:space-x-8 md:mt-0 md:border-0">
               <li>
                 <Link
                   smooth
                   to={"/liea"}
-                  className="block py-2 pl-3 pr-4 text-white rounded md:bg-transparent md:p-0 "
+                  className="block mr-3 py-2 pl-3 pr-4 text-white rounded md:bg-transparent md:p-0 "
                   aria-current="page"
                 >
                   Home
@@ -69,7 +69,7 @@ const NavBar = () => {
                 <Link
                   smooth
                   to={"/liea#Products"}
-                  className="block py-2 pl-3 pr-4 text-white rounded md:p-0  "
+                  className="block py-2 pl-3 mr-3  pr-4 text-white rounded md:p-0  "
                 >
                   Products
                 </Link>
@@ -78,7 +78,7 @@ const NavBar = () => {
                 <Link
                   smooth
                   to={"/liea#LieaAbout"}
-                  className="block py-2 pl-3 pr-4 text-white rounded md:hover:bg-transparent md:p-0 dark:text-white dark:hover:text-white md:dark:hover:bg-transparent"
+                  className="block py-2 mr-3  pl-3 pr-4 text-white rounded md:hover:bg-transparent md:p-0 dark:text-white dark:hover:text-white md:dark:hover:bg-transparent"
                 >
                   About us
                 </Link>
@@ -117,7 +117,7 @@ const NavBar = () => {
                   }}
                   smooth
                   to={"/liea#Products"}
-                  className="block py-4 px-5 text-white rounded dark:text-green-400 hover:text-green-500"
+                  className="block py-4 px-5 text-white rounded dark:text-white hover:text-green-500"
                 >
                   Products
                 </Link>

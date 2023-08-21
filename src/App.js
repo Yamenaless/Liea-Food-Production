@@ -1,5 +1,4 @@
-import './App.css';
-import HeroSection from './componets/hero/HeroSection';
+import HeroSection from './componets/hero/HeroSection.js.';
 import NavBar from './componets/navbar/Navbar';
 
 function App() {
