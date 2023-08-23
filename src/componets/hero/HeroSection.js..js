@@ -13,7 +13,7 @@ const HeroSection = () => {
       >
         <div className="absolute inset-0 flex items-center justify-center ">
           <div className="text-center text-white">
-            <h1 className="text-5xl md:text-6xl lg:text-6xl font-bold mb-8">
+            <h1 className="text-4xl md:text-6xl lg:text-6xl font-bold mb-8">
               Enjoy Delicious Meals
               <br />
               With Liea® Foods

@@ -9,6 +9,7 @@ module.exports = {
       'IBM': ['IBM Plex Sans', 'sans-serif'] , 
       'Roboto': ['Roboto', 'sans-serif'] 
     },
+ 
     extend: {},
   },
   plugins: [],
