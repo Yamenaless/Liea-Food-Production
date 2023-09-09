@@ -20,7 +20,7 @@ const NavBar = () => {
                 "//uploads-ssl.webflow.com/63c0348e8e38eb4cc747e99e/63f3a6fc6498f4e353ff39d7_logo.svg"
               }
               className="h-18 mr-3"
-              alt="Flowbite Logo"
+              alt="Liea Logo"
             />
           </Link>
           {/* ======== LOGO END HERE ============ */}

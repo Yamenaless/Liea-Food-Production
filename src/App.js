@@ -1,3 +1,5 @@
+import AboutUs from "./componets/about/AboutUs";
+import Footer from "./componets/footer/Footer";
 import HeroSection from "./componets/hero/HeroSection.js.";
 import NavBar from "./componets/navbar/Navbar";
 import Products from "./componets/products/products";
@@ -12,8 +14,9 @@ function App() {
       <Section />
       <Products/>
       <VideoSection/>
-      <Section />
-
+      <AboutUs/>
+      <VideoSection/>
+      <Footer/>
     </div>
   );
 }
