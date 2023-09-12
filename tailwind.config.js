@@ -7,7 +7,8 @@ module.exports = {
     fontFamily: {
       'Cabin': ['Cabin', 'sans-serif'],
       'IBM': ['IBM Plex Sans', 'sans-serif'] , 
-      'Roboto': ['Roboto', 'sans-serif'] 
+      'Roboto': ['Roboto', 'sans-serif'] ,
+      'Montserrat' : ['Montserrat', 'sans-serif']
     },
  
     extend: {},

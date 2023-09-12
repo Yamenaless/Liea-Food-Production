@@ -1,5 +1,6 @@
 import React from "react";
-import { Link } from "react-router-dom";
+import { HashLink as Link } from "react-router-hash-link";
+import { CategoriesLinks, CareersLinks } from "./links";
 
 const Footer = () => {
   return (
@@ -16,44 +17,47 @@ const Footer = () => {
           />
         </Link>
         <div className="w-full sm:w-1/2 md:w-1/3 lg:w-1/4 mb-4">
-          <h3 className="text-xl mb-2 font-bold">Categories</h3>
+          <h3 className="text-xl text-[#0e2522] mb-2 font-extrabold">
+            Categories
+          </h3>
           <ul>
-            <li className="hover:text-white text-black">
-              <a href="/canned-food">Canned Food For Cooking</a>
-            </li>
-            <li className="hover:text-white text-black">
-              <a href="/legumes-grains">Legumes, Grains And Pulses</a>
-            </li>
-            <li className="hover:text-white text-black">
-              <a href="/ready-to-eat">Ready-to-eat Foods</a>
-            </li>
-            <li className="hover:text-white text-black">
-              <a href="/pasta-spaghetti">Pasta And Spaghetti</a>
-            </li>
-            <li className="hover:text-white text-black">
-              <a href="/olive-oils">Olive & Vegetable Oils</a>
-            </li>
+            {CategoriesLinks.map((item, index) => {
+              return (
+                <li key={index} className="hover:opacity-75 text-black">
+                  <Link to={item.link}>{item.text}</Link>
+                </li>
+              );
+            })}
           </ul>
         </div>
         <div className="w-full sm:w-1/2 md:w-1/3 lg:w-1/4 mb-4">
-          <h3 className="text-xl mb-2 font-bold">Careers</h3>
+          <h3 className="text-xl text-[#0e2522] mb-2 font-extrabold">
+            Careers
+          </h3>
           <ul>
-            <li>
-              <a href="/culture">Culture</a>
-            </li>
-            <li>
-              <a href="/positions">Available Positions</a>
-            </li>
+            {CareersLinks.map((item, index) => {
+              return (
+                <li key={index} className="hover:opacity-75 text-black">
+                  <Link to={item.link}>{item.text}</Link>
+                </li>
+              );
+            })}
           </ul>
         </div>
         <div className="w-full sm:w-1/2 md:w-1/3 lg:w-1/4 mb-4">
-          <h3 className="text-xl mb-2 font-bold">Company</h3>
+          <h3 className="text-xl  text-[#0e2522] mb-2 font-extrabold">
+            Company
+          </h3>
           <ul>
             <li>
-              <a href="/Alloy Group">Alloy Group</a>
+              <Link className="hover:opacity-75" to="/Alloy Group">
+                Alloy Group
+              </Link>
             </li>
             <li>
-              <a href="/Contact us">Contact us</a>
+              <Link className="hover:opacity-75" to="/Contact us">
+                Contact us
+              </Link>
             </li>
           </ul>
         </div>

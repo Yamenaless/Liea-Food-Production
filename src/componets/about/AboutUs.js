@@ -2,11 +2,9 @@ import React from "react";
 
 const AboutUs = () => {
   return (
-    <section className="text-black py-12">
+    <section id="LieaAbout" className="text-black py-12">
       <div className="container mx-auto px-4 flex flex-col md:flex-row items-center">
-
-
-
+        
         <div className="md:w-1/2 rounded-3xl  h-[700px]">
           <div className="h-full flex justify-center rounded-3xl items-center  ">
             <img
@@ -18,12 +16,12 @@ const AboutUs = () => {
         </div>
 
         {/* text section  */}
-        <div className="md:w-1/2 ml-4 md:ml-9 sm:mt-5 ">
-            <p className="text-3xl font-IBM text-orange-400 mb-3 mt-5">About us</p>
-            <h1 className="text-5xl lg:w-[600px]  md:w-[400px] w-[400px] text-green-950 md:text-6xl lg:text-6xl font-bold mb-8">
+        <div   className="md:w-1/2 ml-4 md:ml-9 sm:mt-5 ">
+            <p className="text-3xl font-Montserrat font-bold text-[#cd8c5d] mb-3 mt-5">About us</p>
+            <h1 className="text-4xl lg:w-[600px] md:w-[400px] w-[400px] text-[#023731] md:text-5xl lg:text-5xl font-bold font-Montserrat mb-8">
             Enjoy Delicious Meals Made With love by Liea® Foods
             </h1>
-          <p className="text-lg md:text-xl font-Roboto max-w-3xl">
+          <p className="text-sm md:text-xl font-Roboto max-w-xl">
             At Liea® we offer high-quality food products to our customers across
             the world. Our mission is to design, research, and manufacture
             innovative food products that cater to the needs and desires of our
