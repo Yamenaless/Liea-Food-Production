@@ -1,18 +1,18 @@
 import React from "react";
 import { HashLink as Link } from "react-router-hash-link";
-import { CategoriesLinks, CareersLinks } from "./links";
+import { CategoriesLinks, CareersLinks, copyrightInfoLinks } from "./footerLinks";
 
 const Footer = () => {
   return (
     <footer className="bg-white text-black py-6">
-      <hr className="mb-10 text-black bg-black" />
-      <div className="container mx-auto flex flex-wrap justify-between">
-        <Link to={"/liea"} className="flex items-center">
+      <hr className="mb-10 text-black " />
+      <div className="container mx-auto flex flex-wrap justify-between px-10 sm:px-0">
+        <Link to={"https://www.alloygroup.com.tr/"} target="_blank" className="flex items-center cursor-pointer  ">
           <img
             src={
-              "//uploads-ssl.webflow.com/63c0348e8e38eb4cc747e99e/63f3a6fc6498f4e353ff39d7_logo.svg"
+              "//uploads-ssl.webflow.com/63c0348e8e38eb4cc747e99e/644704eca74100e285d9219a_dark%20logo.svg"
             }
-            className="h-18 mr-3"
+            className="h-32 w-32 mr-3"
             alt="Liea Logo"
           />
         </Link>
@@ -60,6 +60,19 @@ const Footer = () => {
               </Link>
             </li>
           </ul>
+        </div>
+      </div>
+      <div className="container mx-auto text-center">
+        <p className="text-sm">
+          &copy; 2017-{new Date().getFullYear()} Liea&reg; All rights reserved
+        </p>
+        <div className="mt-2">
+          {
+            copyrightInfoLinks.map((item , id) => (
+              <Link  target="_blank" rel="noopener noreferrer" className="text-gray-400 hover:opacity-70 mx-2" to={item.link} key={item.id}>{item.text}{item.slash}</Link>
+              
+            ))
+          }
         </div>
       </div>
     </footer>

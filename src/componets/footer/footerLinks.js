@@ -43,3 +43,32 @@ export const CompanyLinks = [
     }
 
 ]
+
+export const copyrightInfoLinks = [
+    {
+        id : 1,
+        link : "/privacy-policy",
+        text: "Privacy Policy",
+        slash: " /"
+    },
+    {
+        id : 2,
+        link : "/cookie-policy",
+        text: "Cookie Policy"
+    },
+    {
+        id : 3,
+        link : "https://www.instagram.com",
+        text: "Instagram"
+    },
+    {
+        id : 4,
+        link : "https://www.facebook.com",
+        text: "Facebook"
+    },
+    {
+        id : 5,
+        link : "https://www.linkedin.com",
+        text: "LinkedIn"
+    },
+]

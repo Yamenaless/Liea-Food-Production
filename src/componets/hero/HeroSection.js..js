@@ -4,7 +4,8 @@ const HeroSection = () => {
   return (
     <>
       <div
-        className=" md:resize relative h-screen bg-cover bg-center bg-no-repeat"
+      id="liea"
+        className="liea md:resize relative h-screen bg-cover bg-center bg-no-repeat"
         style={{
           backgroundImage:
             "url('https://uploads-ssl.webflow.com/63c0348e8e38eb4cc747e99e/6458c2c39039924ac9f2319a_Liea-hero-image.jpg')",

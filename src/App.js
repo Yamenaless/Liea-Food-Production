@@ -2,8 +2,6 @@ import AboutUs from "./componets/about/AboutUs";
 import Footer from "./componets/footer/Footer";
 import HeroSection from "./componets/hero/HeroSection.js.";
 import NavBar from "./componets/navbar/Navbar";
-// import Imagecarousel from "./componets/productSlider/Imagecarousel";
-import Products from "./componets/products/products";
 import Section from "./componets/section/Section";
 import VideoSection from "./componets/videoSection/VideoSection";
 
@@ -13,11 +11,9 @@ function App() {
       <NavBar />
       <HeroSection />
       <Section />
-      <Products/>
       <VideoSection/>
       <AboutUs/>
       <VideoSection/>
-      {/* <Imagecarousel/> */}
       <Footer/>
     </div>
   );
