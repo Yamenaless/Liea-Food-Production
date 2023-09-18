@@ -5,9 +5,9 @@ import { CategoriesLinks, CareersLinks, copyrightInfoLinks } from "./footerLinks
 const Footer = () => {
   return (
     <footer className="bg-white text-black py-6">
-      <hr className="mb-10 text-black " />
+      <hr className="mb-10 bg-black text-black " />
       <div className="container mx-auto flex flex-wrap justify-between px-10 sm:px-0">
-        <Link to={"https://www.alloygroup.com.tr/"} target="_blank" className="flex items-center cursor-pointer  ">
+        <Link to={"https://www.alloygroup.com.tr/"} target="_blank" className="flex  cursor-pointer  ">
           <img
             src={
               "//uploads-ssl.webflow.com/63c0348e8e38eb4cc747e99e/644704eca74100e285d9219a_dark%20logo.svg"
